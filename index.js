@@ -35,9 +35,9 @@ workbook.xlsx.readFile(fileName)
         const jsonString = JSON.stringify(jsonData, null, 2);
 
         // Save the JSON string to a file
-        fs.writeFileSync('output.json', jsonString);
+        fs.writeFileSync(`${fileName}.json`, jsonString);
 
-        console.log('Conversion completed. JSON file saved as output.json');
+        console.log(`Conversion completed. JSON file saved as ${fileName}.json`);
     })
     .catch(error => {
         console.error('Error reading the Excel file:', error.message);
